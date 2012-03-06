@@ -15,10 +15,10 @@ import main.Classifier
 val classifier = new Classifier()
 
 // this classifier use word stemming in english by default.
-// If you want to use another language, specify it as follows:
+// if you want to use another language, specify it as follows:
 val classifier = new Classifier("french")
 
-// If you don't want any stemming, specify it as follows:
+// if you don't want any stemming, specify it as follows:
 val classifier = new Classifier(null)
 
 // also by default, the parsing phase filters out stop words, to
