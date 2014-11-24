@@ -18,7 +18,8 @@ class Classifier(lang: String) {
 
   def train(category: String, text: String) {
     val tokenizer = new Tokenizer(text, _stemming)
-    tokenizer.eachWord().foreach(word => _wcount.put((category, word), 1+_wcount.get((category, word)).getOrElse(0)))
+    tokenizer.eachWord().foreach(word => _wcount.put((category, word), 
+      1+_wcount.get((category, word)).getOrElse(0)))
     _ccount.put(category, 1+_ccount.get(category).getOrElse(0))
   }
 
