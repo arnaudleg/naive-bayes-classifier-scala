@@ -22,7 +22,8 @@ class Tokenizer(t: String, l: String) {
     var tokens = List[String]()
     if (text == "") return tokens
     if (stemLang != null) {
-      val stem = Class.forName(Tokenizer.stemPackage + stemLang + Tokenizer.stemFile).newInstance.asInstanceOf[{
+      val stem = Class.forName(Tokenizer.stemPackage + stemLang + 
+          Tokenizer.stemFile).newInstance.asInstanceOf[{
         def setCurrent(name: String)
         def stem()
         def getCurrent: String
